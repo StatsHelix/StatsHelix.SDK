@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace StatsHelix.SDK
 {
@@ -46,6 +47,10 @@ namespace StatsHelix.SDK
             ProcessGameStateThread.Start();
         }
 
+        public void SetGameState(params (string key, string value)[] newState)
+        {
+            SetGameState(newState.ToDictionary(x => x.key, x => x.value));
+        }
         public void SetGameState(Dictionary<string, string> newState)
         {
             if (!StatsHelixApi.IsInitialized)
