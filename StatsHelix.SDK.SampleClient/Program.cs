@@ -41,7 +41,10 @@ namespace StatsHelix.SDK.SampleClient
 
             while (true)
             {
-                StatsHelixApi.GameState.UpdatePartialGameState(("Name2", possibleNames[counter++ % possibleNames.Length]), ("Name3", possibleNames[counter++ % possibleNames.Length]));
+                StatsHelixApi.GameState.UpdatePartialGameState(
+                    ("Name2", possibleNames[counter++ % possibleNames.Length]),
+                    ("Name3", possibleNames[counter++ % possibleNames.Length])
+                );
 
                 // Pretend that things happen in our game
                 await Task.Delay(TimeSpan.FromSeconds(7.5));
