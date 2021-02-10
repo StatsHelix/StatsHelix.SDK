@@ -15,7 +15,7 @@ namespace StatsHelix.SDK.SampleClient
         static async Task AsyncMain()
         {
             // First, let's tell the api who we are.
-            StatsHelixApi.Intialize(14, "Test Game");
+            StatsHelixApi.Initialize(5, "Sample Game");
 
             var areWeAuthorized = await StatsHelixApi.Auth.IsThisComputerConnectedAsync();
 
@@ -50,7 +50,7 @@ namespace StatsHelix.SDK.SampleClient
 
         static async void StatsHelixIn10Lines()
         {
-            StatsHelixApi.Intialize(42, "Test Game");
+            StatsHelixApi.Initialize(5, "Sample Game");
             if (ComputerConnectionState.Connected != await StatsHelixApi.Auth.IsThisComputerConnectedAsync())
                 StatsHelixApi.Auth.StartUserReConnectThisComputer();
 

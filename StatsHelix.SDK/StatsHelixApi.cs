@@ -69,7 +69,7 @@ namespace StatsHelix.SDK
         /// </summary>
         /// <param name="gameId">The GameId for this game. You can find it in your dashboard.</param>
         /// <param name="gameName">The name of the game shown to the user during signup.</param>
-        public static void Intialize(int gameId, string gameName)
+        public static void Initialize(int gameId, string gameName)
         {
             lock (InitLock)
             {
